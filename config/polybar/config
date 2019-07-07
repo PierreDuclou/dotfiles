@@ -50,7 +50,7 @@ font-4 = siji:pixelsize=10
 
 modules-left = i3
 modules-center = xwindow
-modules-right = volume memory cpu battery temperature date
+modules-right = memory cpu battery temperature date
 
 tray-position = right
 tray-padding = 2

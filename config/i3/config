@@ -229,6 +229,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 15
 # decrease screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 15
 
+# rofi
+bindsym $mod+d exec rofi -show drun
+
 # screenshooter
 bindsym $mod+p exec xfce4-screenshooter -rc
 
@@ -277,6 +280,3 @@ smart_borders on
 
 # compton
 exec --no-startup-id compton -i 0.9 --no-fading-openclose
-
-# ulauncher
-exec_always --no-startup-id "ulauncher --hide-window"
