@@ -1,5 +1,5 @@
 set nocompatible
-so ~/.vim/config/plugins.vim
+" so ~/.vim/config/plugins.vim
 
 "---General---"
 so ~/.vim/config/general.vim
