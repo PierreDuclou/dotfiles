@@ -97,17 +97,6 @@ bindsym $mod+q focus parent
 # Workspaces
 ##############################
 
-# set $ws1 "1: "
-# set $ws2 "2: "
-# set $ws3 "3: "
-# set $ws4 "4: "
-# set $ws5 "5: "
-# set $ws6 "6: "
-# set $ws7 "7: "
-# set $ws8 "8: "
-# set $ws9 "9: "
-# set $ws0 "10: "
-
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -214,19 +203,17 @@ bindsym $mod+Shift+exclam exec shutdown 0
 # restart
 bindsym $mod+Shift+asterisk exec shutdown -r 0
 
-# mute volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+# volume
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
-# lower volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 
-# raise volume
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-
-# increase screen brightness
+# brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 15
-
-# decrease screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 15
 
 # rofi
@@ -245,6 +232,20 @@ exec --no-startup-id discord
 exec --no-startup-id dropbox
 exec --no-startup-id firefox
 exec --no-startup-id xfce4-clipman
+exec --no-startup-id conky -c ~/.config/i3/conky_maia
+exec --no-startup-id volumeicon
+
+# polkit
+#exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+# polybar
+exec_always --no-startup-id "killall polybar; polybar -r default"
+
+# wallpaper
+exec_always --no-startup-id feh --bg-scale "$HOME/Pictures/Wallpapers/parrot-gasmask.png"
+
+# compton
+exec --no-startup-id compton -i 0.9 --no-fading-openclose
 
 
 ##############################
@@ -261,15 +262,6 @@ set $bg_urgent #586291
 set $text #c8fffa
 set $text_inactive #838383
 
-# polkit
-exec_always --no-startup-id "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-
-# polybar
-exec_always --no-startup-id "killall polybar; polybar -r default"
-
-# wallpaper
-exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/adapta_i3.jpg
-
 # borders
 for_window [class=".*"] border pixel 0
 
@@ -277,6 +269,3 @@ for_window [class=".*"] border pixel 0
 gaps inner 15
 smart_gaps on
 smart_borders on
-
-# compton
-exec --no-startup-id compton -i 0.9 --no-fading-openclose

@@ -45,7 +45,8 @@ alias rm="trash"
 alias sudo="sudo "
 alias java8="/usr/lib/jvm/java-8-openjdk/bin/java"
 alias utf="cat ~/unicodes"
-alias dnfinstall="sudo dnf -y install "
+alias install="yay -S --noconfirm "
+alias update="yay -Syu --noconfirm"
 
 function bak {
     cp $1 "$1.bak"
