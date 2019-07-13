@@ -65,6 +65,10 @@ function randr {
 }
 # xrandr --fb 1366x768 --output LVDS1 --mode 1366x768 --scale 1x1 --primary --output VGA1 --same-as LVDS1 --mode 1024x768 --scale-from 1366x768
 
+function gi {
+    curl -sLw "\n" https://www.gitignore.io/api/"$@"
+}
+
 # env
 export GOPATH="$HOME/go"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"

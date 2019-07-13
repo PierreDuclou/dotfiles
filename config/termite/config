@@ -36,7 +36,7 @@ filter_unmatched_urls = true
 #cursor_foreground = #dcdccc
 foreground = #dcdccc
 foreground_bold = #F8F8F8
-background = #1D1F21
+background = #101010
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
@@ -45,7 +45,7 @@ background = #1D1F21
 highlight = #2f2f2f
 
 # colors from color0 to color254 can be set
-color0 = #1D1F21
+color0 = #101010
 color1 = #eb3b3b
 color2 = #60b48a
 color3 = #dfaf8f

@@ -140,6 +140,7 @@ assign[class="rstudio"] $ws2
 assign[class="RStudio"] $ws2
 assign[class="Eclipse"] $ws2
 assign[class="Code"] $ws2
+assign[class="code-oss"] $ws2
 assign[class="Chromium"] $ws3
 assign[class="Firefox"] $ws3
 assign[class="Tor Browser"] $ws3
