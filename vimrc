@@ -1,5 +1,4 @@
 set nocompatible
-" so ~/.vim/config/plugins.vim
 
 "---General---"
 so ~/.vim/config/general.vim
@@ -11,13 +10,13 @@ so ~/.vim/config/visual.vim
 so ~/.vim/config/keymap.vim
 
 "---Plugins---"
+so ~/.vim/config/plugins.vim
 so ~/.vim/config/plugins_settings.vim
 
 "---Auto-Commands---"
 so ~/.vim/config/autocommands.vim
 
 "---Tips---"
-" [key]+i+[char] - action (key) performed on text wrapped into the specified char
 " ctrl+altgr+) - go to the called method's definition
 " ,+t - :tag
 " vim surround : c+s+[oldchar][newchar] - change surrounding char

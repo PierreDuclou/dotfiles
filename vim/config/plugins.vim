@@ -1,31 +1,24 @@
-filetype off                  " required
+call plug#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
+Plug 'tpope/vim-fugitive'                                       " git
+Plug 'tpope/vim-surround'                                       " surround
+Plug 'scrooloose/nerdtree'                                      " tree
+Plug 'scrooloose/syntastic'                                     " linting
+Plug 'scrooloose/nerdcommenter'                                 " auto comments
+Plug 'ctrlpvim/ctrlp.vim'                                       " ctrl p
+Plug 'skwp/greplace.vim'                                        " grep
+Plug 'ervandew/supertab'                                        " tab cut completion
+Plug 'MarcWeber/vim-addon-mw-utils'                             " interpret a file by function and cache file automatically
+Plug 'tomtom/tlib_vim'                                          " multiple utilities functions
+Plug 'honza/vim-snippets'
+Plug 'tobyS/vmustache'                                          " template engine
+Plug 'jiangmiao/auto-pairs'                                     " auto-pairs
+Plug 'Shougo/vimshell.vim'                                      " shell support
+Plug 'bling/vim-airline'                                        " airline bar
+Plug 'vim-airline/vim-airline-themes'                           " airline themes
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }              " vim-go
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }   " youcompleteme
+Plug 'rust-lang/rust.vim'                                       " rust
+Plug 'mattn/webapi-vim'                                         " webapi
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'                               " git
-Plugin 'tpope/vim-surround'                               " surround
-Plugin 'scrooloose/nerdtree'                              " tree
-Plugin 'scrooloose/syntastic'                             " linting
-Plugin 'scrooloose/nerdcommenter'                         " auto comments
-Plugin 'ctrlpvim/ctrlp.vim'                               " ctrl p
-Plugin 'skwp/greplace.vim'                                " grep
-Plugin 'ervandew/supertab'                                " tab cut completion
-Plugin 'MarcWeber/vim-addon-mw-utils'                     " interpret a file by function and cache file automatically
-Plugin 'tomtom/tlib_vim'                                  " multiple utilities functions
-Plugin 'honza/vim-snippets'
-"Plugin 'SirVer/ultisnips'
-Plugin 'tobyS/vmustache'                                  " template engine
-"Plugin 'python-mode/python-mode'
-Plugin 'jiangmiao/auto-pairs'                             " auto-pairs
-Plugin 'Shougo/vimshell.vim'                              " shell support
-Plugin 'bling/vim-airline'                                " airline bar
-Plugin 'vim-airline/vim-airline-themes'                   " airline themes
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
+call plug#end()

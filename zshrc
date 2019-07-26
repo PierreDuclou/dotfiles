@@ -1,36 +1,28 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+xset b off
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# env
+export GPG_TTY=$(tty)
+export EDITOR=vim
+export ZSH="/home/$USER/.oh-my-zsh"
+export GOPATH="$HOME/go"
+export MEHBOT_TOKEN="MzU2NDgyMDE1Nzk4ODg2NDAw.XTsLuw.R5GgtcMiK2mpklld9fca_X1BG2U"
+export MEHBOT_HOME="~/.mehbot"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+#export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+
+# PATH
+PATH="$PATH:$HOME/.config/composer/vendor/bin"
+PATH="$PATH:$HOME/.npm-global/bin"
+PATH="$PATH:$GOPATH/bin"
+PATH="$PATH:$HOME/.cargo/bin"
+
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="avit"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# ZSH plugins
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo)
-
+plugins=(git sudo gitignore)
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-export EDITOR=vim
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-xset b off
-export GPG_TTY=$(tty)
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
@@ -47,6 +39,11 @@ alias java8="/usr/lib/jvm/java-8-openjdk/bin/java"
 alias utf="cat ~/unicodes"
 alias install="yay -S --noconfirm "
 alias update="yay -Syu --noconfirm"
+alias copy="xclip -sel clip"
+
+function showpath {
+    echo $PATH | awk 'BEGIN {RS = ":"} {print $0}'
+}
 
 function bak {
     cp $1 "$1.bak"
@@ -64,20 +61,6 @@ function randr {
     xrandr --output "$1" --auto --scale-from 1366x768 --output LVDS1
 }
 # xrandr --fb 1366x768 --output LVDS1 --mode 1366x768 --scale 1x1 --primary --output VGA1 --same-as LVDS1 --mode 1024x768 --scale-from 1366x768
-
-function gi {
-    curl -sLw "\n" https://www.gitignore.io/api/"$@"
-}
-
-# env
-export GOPATH="$HOME/go"
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
-
-# PATH
-PATH="$PATH:$HOME/.config/composer/vendor/bin"
-PATH="$PATH:$HOME/.npm-global/bin"
-PATH="$PATH:$GOPATH/bin"
-PATH="$PATH:$HOME/.cargo/bin/racer"
 
 # running neofetch when a new shell starts
 neofetch

@@ -1,8 +1,7 @@
-"---Visual---"
 colorscheme atom-dark-256
 set t_Co=256
 set guifont=Hack\ 13
-set linespace=20 
+set linespace=20
 set number
 set foldcolumn=0
 hi LineNr guibg=bg
