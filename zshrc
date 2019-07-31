@@ -5,8 +5,7 @@ export GPG_TTY=$(tty)
 export EDITOR=vim
 export ZSH="/home/$USER/.oh-my-zsh"
 export GOPATH="$HOME/go"
-export MEHBOT_TOKEN="MzU2NDgyMDE1Nzk4ODg2NDAw.XTsLuw.R5GgtcMiK2mpklld9fca_X1BG2U"
-export MEHBOT_HOME="~/.mehbot"
+export BROWSER="/usr/bin/firefox"
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
@@ -40,8 +39,12 @@ alias utf="cat ~/unicodes"
 alias install="yay -S --noconfirm "
 alias update="yay -Syu --noconfirm"
 alias copy="xclip -sel clip"
+alias di="docker image"
+alias dc="docker container"
+alias dn="docker network"
+alias nethogs="sudo nethogs"
 
-function showpath {
+function path {
     echo $PATH | awk 'BEGIN {RS = ":"} {print $0}'
 }
 
@@ -61,6 +64,3 @@ function randr {
     xrandr --output "$1" --auto --scale-from 1366x768 --output LVDS1
 }
 # xrandr --fb 1366x768 --output LVDS1 --mode 1366x768 --scale 1x1 --primary --output VGA1 --same-as LVDS1 --mode 1024x768 --scale-from 1366x768
-
-# running neofetch when a new shell starts
-neofetch
