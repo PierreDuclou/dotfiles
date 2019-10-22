@@ -5,4 +5,4 @@ nmap <Leader><space> :nohlsearch<cr>
 nmap <c-K> :NERDTreeToggle<cr>
 nmap <c-R> :CtrlPBufTag<cr>
 nmap <Leader>t :tag<space>
-nmap <c-Y> :redo<cr> 
+nmap <c-Y> :redo<cr>
