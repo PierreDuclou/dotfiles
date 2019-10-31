@@ -1,3 +1,4 @@
+# Disable beep
 xset b off
 
 #--- ENV ----------------------------------------------------------------------
@@ -21,12 +22,12 @@ plugins=(
     git
     sudo
     gitignore
+    mvn
     docker
     docker-compose
     httpie
     kubectl
     minikube
-    mvn
     zsh-syntax-highlighting
 )
 
@@ -45,8 +46,8 @@ alias runghc="stack runghc"
 alias ghc="stack ghc"
 alias sudo="sudo "
 alias java8="/usr/lib/jvm/java-8-openjdk/bin/java"
-alias install="yay -S --noconfirm "
-alias update="yay -Syu --noconfirm"
+alias sysinst="yay -S --noconfirm "
+alias sysupdate="yay -Syu --noconfirm"
 alias copy="xclip -sel clip"
 alias nethogs="sudo nethogs"
 alias th="trash"
@@ -72,25 +73,30 @@ alias mct="mvn clean test"
 alias mci="mvn clean install"
 
 #--- Functions ----------------------------------------------------------------
-function path {
+function path() {
     echo $PATH | awk 'BEGIN {RS = ":"} {print $0}'
 }
 
-function bak {
+function bak() {
     cp $1 "$1.bak"
 }
 
-function sslcrypt {
+function sslcrypt() {
     openssl passwd -crypt $1
 }
 
-function randr {
+function randr() {
     xrandr --output "$1" --auto --scale-from 1366x768 --output LVDS1
 }
 # xrandr --fb 1366x768 --output LVDS1 --mode 1366x768 --scale 1x1 --primary --output VGA1 --same-as LVDS1 --mode 1024x768 --scale-from 1366x768
 
-function aliases {
+function aliases() {
     gawk 'BEGIN{printf "\n%-16s %s\n", "ALIAS", "COMMAND"} match($0, /^alias\s(.+)=(".*")$/, a) {printf "%-16s %s\n", a[1], a[2]}' $HOME/.zshrc
+}
+
+function zshplugin() {
+    local dir="$HOME/.oh-my-zsh/plugins/$1"
+    [ -d "$dir" ] && less "$dir/README.md" || echo "ZSH plugin '$1' not found."
 }
 
 [ -s "/home/wk/.jabba/jabba.sh" ] && source "/home/wk/.jabba/jabba.sh"

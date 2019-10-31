@@ -265,6 +265,7 @@ set $text_inactive #838383
 
 # borders
 for_window [class=".*"] border pixel 0
+# default_border pixel 0
 
 # gaps
 gaps inner 15
