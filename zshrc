@@ -52,6 +52,7 @@ alias copy="xclip -sel clip"
 alias nethogs="sudo nethogs"
 alias th="trash"
 alias mk="minikube"
+alias ms="minishift"
 
 # docker
 alias di="docker image"
