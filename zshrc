@@ -6,7 +6,7 @@ export GPG_TTY=$(tty)
 export ZSH="/home/$USER/.oh-my-zsh"
 export GOPATH="$HOME/go"
 export GO111MODULE=on
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 #--- PATH ---------------------------------------------------------------------
 PATH="$PATH:$HOME/.config/composer/vendor/bin"
