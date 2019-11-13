@@ -6,7 +6,7 @@ export GPG_TTY=$(tty)
 export ZSH="/home/$USER/.oh-my-zsh"
 export GOPATH="$HOME/go"
 export GO111MODULE=on
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #--- PATH ---------------------------------------------------------------------
 PATH="$PATH:$HOME/.config/composer/vendor/bin"
@@ -45,7 +45,6 @@ alias ghci="stack ghci"
 alias runghc="stack runghc"
 alias ghc="stack ghc"
 alias sudo="sudo "
-alias java8="/usr/lib/jvm/java-8-openjdk/bin/java"
 alias sysinst="yay -S --noconfirm "
 alias sysupdate="yay -Syu --noconfirm"
 alias copy="xclip -sel clip"
@@ -66,12 +65,6 @@ alias dsm="docker system"
 alias dv="docker volume"
 alias dl="docker logs"
 alias db="docker build"
-
-# mvn
-alias mcp="mvn clean package"
-alias mcpst="mvn clean package -DskipTests"
-alias mct="mvn clean test"
-alias mci="mvn clean install"
 
 #--- Functions ----------------------------------------------------------------
 function path() {
