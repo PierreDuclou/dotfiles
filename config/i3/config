@@ -152,6 +152,7 @@ assign[class="discord"] $ws9
 assign[class="libreoffice"] $ws0
 assign[class="libreoffice-*"] $ws0
 assign[class="Steam"] $ws8
+assign[class="Franz"] $ws7
 for_window [class="sample.Main"] floating enable
 for_window [class="Tk"] floating enable
 for_window [class="ulauncher"] floating enable

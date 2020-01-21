@@ -16,9 +16,6 @@ Plug 'jiangmiao/auto-pairs'                                     " auto-pairs
 Plug 'Shougo/vimshell.vim'                                      " shell support
 Plug 'bling/vim-airline'                                        " airline bar
 Plug 'vim-airline/vim-airline-themes'                           " airline themes
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }              " vim-go
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }   " youcompleteme
 Plug 'rust-lang/rust.vim'                                       " rust
-Plug 'mattn/webapi-vim'                                         " webapi
 
 call plug#end()
